@@ -4,23 +4,68 @@ body{
     background: #fff;
     font-family: 'Inter', sans-serif;
 }
-h1{}
-div p{}
+h1{
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 1.3125rem;
+    margin-bottom: 0.1rem;
+}
+.header p{
+    display: inline;
+    font-size: 0.625rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
 .rectangle1{
     position: absolute;
-    background-color: #E5E5E5;
+    background-color: #FCFCFC;
+    display: grid;
+    grid-template-rows:5;
+    width: 32.875rem;
+    height: 46.1875rem;
+    left: 28.5625rem;
+    top: 13.625rem;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    box-shadow: -1px 7px 8px -5px rgba(0, 0, 0, 0.14)
+    
+}
+.topProfileInfo{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    height: 4.6875rem;
+}
+.profilePic{
+    display: flex;
+    align-items:flex-start;
+    margin-top: 0.9375rem;
+    margin-left: 1.5625rem;
+    grid-column: 1/1;
+    
+}
+img{
+     width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 1.5625rem;
+}
+.header{
+    grid-column: 2/6;
+    
+}
+.sliderContainer{
+    background-image: url(https://picsum.photos/526/320);
     width: 32.875rem;
     height: 20.3125rem;
-    left: 28.625rem;
-    top: 13.625rem;
 }
-.topProfileInfo{}
-.profilePic{}
-img{}
-.header{}
-.sliderContainer{}
 .sliderButtons{}
-.frameActions{}
+.underSlider{
+    background-color:;
+    height: 21.1875rem;
+}
+.frameActions{
+    display: flex;
+    align-items: flex-start;
+}
 .userDescriptionPost{}
 .commentSection{}
 .commentsForm{}
