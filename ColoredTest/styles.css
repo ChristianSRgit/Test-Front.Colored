@@ -1,0 +1,28 @@
+body{
+    width: 1440px;
+    height: 1024px;
+    background: #fff;
+    font-family: 'Inter', sans-serif;
+}
+h1{}
+div p{}
+.rectangle1{
+    position: absolute;
+    background-color: #E5E5E5;
+    width: 32.875rem;
+    height: 20.3125rem;
+    left: 28.625rem;
+    top: 13.625rem;
+}
+.topProfileInfo{}
+.profilePic{}
+img{}
+.header{}
+.sliderContainer{}
+.sliderButtons{}
+.frameActions{}
+.userDescriptionPost{}
+.commentSection{}
+.commentsForm{}
+form{}
+button{}
