@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/ColoredTest/styles.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
 </head>
 
 <body>
@@ -84,20 +84,20 @@
                     tristique proin. Mi enim ut eu cras ultrices eget et tristique proin.</p>
             </div>
             <div class="commentSection">
-                <p id="commen1" class="comments"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et  </p>
-                <p id="commen2" class="comments noPostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
-                <p id="commen3" class="comments noPostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
-                <p id="commen4" class="comments noPostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
+                <p id="comment1" class="comments"><span id="span"><b>Comment&nbsp;</b></span></b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget ete</p>
+                <p id="comment2" class="comments PostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
+                <p id="comment3" class="comments noPostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
+                <p id="comment4" class="comments noPostedComment"><b>Comment&nbsp;</b>Comment consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et </p>
             </div>
 
             <div class="commentsInput">
-                <input class="inputTextComment" type="text">
+                <input id="inputText" class="inputTextComment" type="text" minlength="4" maxlength="68"> <!-- fix the layout for comments -->
                 <div id="postBtnListener" class="postBtn">Post</div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/ColoredTest/logic.js"></script>
+    <script src="/JS/logic.js"></script>
 </body>
 
 </html>
