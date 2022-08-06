@@ -136,7 +136,7 @@ img {
 .frameActions {
     display: flex;
     align-items: flex-start;
-    height: 3rem; /*PARA TESTEAR*/
+    height: 3rem;
     padding-top: 1.1875rem;
 
 }
