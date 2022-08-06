@@ -1,45 +1,58 @@
-//Swiper
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-});
-
 //CommentsSection
-let inputText = document.getElementById("inputText");
 let userWhoPost = "Comment";
-let commentNumber = 2;
-let commentID = `comment${commentNumber}`; //iterar para que una vez posteado el coment anterior el id ++
-let postBtnListener = document.getElementById("postBtnListener");
-var comment = document.getElementById(commentID);
+let commentNumber = 0;
+let likes = 757;
+let commentID = `#comment${commentNumber}`;
 
-inputText.addEventListener("keyup", postComment/* textModified */);
+let inputText = document.getElementById("inputText");
+let postBtnListener = document.getElementById("postBtnListener");
+let commentActionBtn = document.getElementById("commentActionBtn");
+let likeActionBtn = document.getElementById("likeActionBtn");
+let likesCountToggle = document.getElementById("likesCountToggle");
+let pathLikeBtn = document.getElementById("#pathLikeBtn");
+
+commentActionBtn.addEventListener("click",focusInput);
+likeActionBtn.addEventListener("click",addLikeAnimate);
 postBtnListener.addEventListener("click", postComment);
 
-function textModified() {
-  /* comment.innerHTML = userWhoPost.replace(/(^|\s)(Comment)(\s|$)/ig, '$1<b>$2</b>$3') + "&nbsp;" + inputText.value;
- */
+function focusInput(){
+  inputText.focus();
+}
+
+function addLikeAnimate(){
+  if(likesCountToggle.innerText === `4,${likes} Likes`){
+    likesCountToggle.innerText = `4,756 Likes`;
+  } else {
+    likesCountToggle.innerText = `4,${likes} Likes`;
+  }
+
+  //add and remove animation + like color
+  if(likeActionBtn.classList.contains("animate")){
+    likeActionBtn.classList.remove("animate")
+    likeActionBtn.classList.remove("pathLikedBtn")
+  } else{
+    likeActionBtn.classList.add("animate")
+    likeActionBtn.classList.add("pathLikedBtn")
+  }
+  
 }
 
 function postComment() {
-  comment.innerHTML = userWhoPost.replace(/(^|\s)(Comment)(\s|$)/ig, '$1<b>$2</b>$3') + "&nbsp;" + inputText.value;
-  if(inputText.value !== ""){
-    inputText.value = "";
-    comment.classList.add("postedComment");
-    comment.classList.remove("noPostedComment");
-    commentNumber ++
-}
-}
+  var commentSection = document.querySelector(".commentSection")
+  var p = document.createElement("p");
 
-//fetch api buscar
-//separar libreria swiper
+  inputText.value.trim();
+  inputText.value.trimRight();
+
+
+  if (inputText.value !== "" && inputText.value !== " "&& inputText.value !== "  "&& inputText.value !== "   ") {
+    commentNumber++
+  } else {
+    return
+  };
+
+  p.innerHTML = userWhoPost.replace(/(^|\s)(Comment)(\s|$)/ig, '$1<b>$2</b>$3') + "&nbsp;" + inputText.value;
+  commentSection.appendChild(p)
+  p.classList.add(`#comment${commentNumber}`)
+  inputText.value = "";
+}
