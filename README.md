@@ -1,3 +1,3 @@
 https://csrcoloredtest.surge.sh/
 
-This was a technical test for applying to Colored
+Technical test applying to Colored
